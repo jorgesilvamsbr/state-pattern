@@ -1,9 +1,8 @@
 package paymentStatus;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-import static paymentStatus.PaymentStatusType.CANCELLED;
 import static paymentStatus.PaymentStatusType.REJECTED;
 
 public class RejectedStatus implements PaymentStatus {
@@ -14,6 +13,6 @@ public class RejectedStatus implements PaymentStatus {
 
     @Override
     public List<PaymentStatusType> getAllowedStates() {
-        return Arrays.asList(REJECTED);
+        return Collections.singletonList(REJECTED);
     }
 }

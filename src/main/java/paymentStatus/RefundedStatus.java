@@ -1,9 +1,9 @@
 package paymentStatus;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-import static paymentStatus.PaymentStatusType.*;
+import static paymentStatus.PaymentStatusType.REFUNDED;
 
 public class RefundedStatus implements PaymentStatus {
     @Override
@@ -13,6 +13,6 @@ public class RefundedStatus implements PaymentStatus {
 
     @Override
     public List<PaymentStatusType> getAllowedStates() {
-        return Arrays.asList(REFUNDED);
+        return Collections.singletonList(REFUNDED);
     }
 }

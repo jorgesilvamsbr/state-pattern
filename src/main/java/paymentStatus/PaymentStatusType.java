@@ -12,19 +12,19 @@ public enum PaymentStatusType {
     CHARGED_BACK("Charged Back", new ChargedBackStatus()),
     CANCELLED("Cancelled", new CancelledStatus());
 
-    private String description;
-    private Object stateClass;
+    private final String description;
+    private final Object instanceStatusClass;
 
-    PaymentStatusType(String description, Object stateClass) {
+    PaymentStatusType(String description, Object instanceStatusClass) {
         this.description = description;
-        this.stateClass = stateClass;
+        this.instanceStatusClass = instanceStatusClass;
     }
 
     public String getDescription() {
         return this.description;
     }
 
-    public PaymentStatus getStateClass() {
-        return (PaymentStatus) this.stateClass;
+    public PaymentStatus getInstanceStatusClass() {
+        return (PaymentStatus) this.instanceStatusClass;
     }
 }

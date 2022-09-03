@@ -10,7 +10,7 @@ public interface PaymentStatus {
 
     default PaymentStatus changeStatus(PaymentStatusType nextPaymentStatus) {
         if (this.getAllowedStates().contains(nextPaymentStatus)) {
-            return nextPaymentStatus.getStateClass();
+            return nextPaymentStatus.getInstanceStatusClass();
         } else {
             throw new StatusChangeNotAllowed(this, nextPaymentStatus);
         }

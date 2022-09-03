@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import static paymentStatus.PaymentStatusType.CHARGED_BACK;
-import static paymentStatus.PaymentStatusType.REFUNDED;
 
 public class ChargedBackStatus implements PaymentStatus {
     @Override
